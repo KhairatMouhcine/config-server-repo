@@ -15,6 +15,13 @@ spring:
             - Path=/users/**
           filters:
             - StripPrefix=0
+        
+        - id: product-service
+          uri: lb://product-service
+          predicates:
+            - Path=/products/**
+          filters:
+            - StripPrefix=0
 
 eureka:
   instance:
