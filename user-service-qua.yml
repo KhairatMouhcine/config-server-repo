@@ -2,9 +2,6 @@ logging:
   level:
     org.springframework: INFO
     ma.gov.pfe: DEBUG
-    reactor.netty: DEBUG
-    reactor.core: DEBUG
-    org.springframework.web.reactive: DEBUG
 
 spring:
   datasource:
