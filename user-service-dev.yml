@@ -8,6 +8,8 @@ logging:
     reactor.netty: DEBUG
     reactor.core: DEBUG
     org.springframework.web.reactive: DEBUG
+    com.netflix.discovery: DEBUG
+    com.netflix.eureka: DEBUG
 
 spring:
   datasource:
@@ -18,7 +20,7 @@ spring:
     password: password
   jpa:
     generate-ddl: true
-    show_sql: true
+    show-sql: true
     hibernate:
       ddl_auto: create
   h2:
@@ -32,7 +34,7 @@ eureka:
     instance-id: ${spring.application.name}-${spring.profiles.active}-${server.port}
   client:
     service-url:
-      default-zone: http://localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka
     register-with-eureka: true
     fetch-registry: true
 
